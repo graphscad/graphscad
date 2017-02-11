@@ -1,0 +1,585 @@
+echo("Save this file as .scad with graphscad to get openscad code included");
+
+/*BEGINGRAPHSCAD{
+    "nodes": [
+        {
+            "name": "node_param",
+            "inputplugs": [
+                {
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "hh"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "22"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": -897.59765625,
+            "x": -761.4062500000005
+        },
+        {
+            "name": "node_param0",
+            "inputplugs": [
+                {
+                    "connection": "node_param.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "ww"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "12.5"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": -905.5,
+            "x": -467.41015625
+        },
+        {
+            "name": "node_param1",
+            "inputplugs": [
+                {
+                    "connection": "node_param0.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "ll"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "23"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": -909.26953125,
+            "x": -188.28515625
+        },
+        {
+            "name": "node_cube",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "sizex",
+                    "value": "ll"
+                },
+                {
+                    "type": "str",
+                    "name": "sizey",
+                    "value": "ww"
+                },
+                {
+                    "type": "str",
+                    "name": "sizez",
+                    "value": "hh"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "hh/2"
+                },
+                {
+                    "type": "str",
+                    "name": "center",
+                    "value": "true",
+                    "combo": [
+                        "true",
+                        "false"
+                    ]
+                }
+            ],
+            "typename": "Node_cube",
+            "version": 1,
+            "y": -355.3545624999998,
+            "x": -469.65715624999893
+        },
+        {
+            "name": "node_param2",
+            "inputplugs": [
+                {
+                    "connection": "node_param1.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "axisdist"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "6"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": -889.831549999999,
+            "x": 124.52268750000007
+        },
+        {
+            "name": "node_param4",
+            "inputplugs": [
+                {
+                    "connection": "node_param2.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "bearingradius"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "6"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": -735.948643749999,
+            "x": -583.9168750000002
+        },
+        {
+            "name": "node_cube0",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "sizex",
+                    "value": "ll+holderl*2"
+                },
+                {
+                    "type": "str",
+                    "name": "sizey",
+                    "value": "ww"
+                },
+                {
+                    "type": "str",
+                    "name": "sizez",
+                    "value": "2"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "holderh+1"
+                },
+                {
+                    "type": "str",
+                    "name": "center",
+                    "value": "true",
+                    "combo": [
+                        "true",
+                        "false"
+                    ]
+                }
+            ],
+            "typename": "Node_cube",
+            "version": 1,
+            "y": 497.7069475000012,
+            "x": 208.5694500000003
+        },
+        {
+            "name": "node_cylinder",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "radius",
+                    "value": "bearingradius"
+                },
+                {
+                    "type": "str",
+                    "name": "radius2",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "height",
+                    "value": "bearingh"
+                },
+                {
+                    "type": "str",
+                    "name": "center",
+                    "value": "true",
+                    "combo": [
+                        "true",
+                        "false"
+                    ]
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "ll/2-axisdist"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "bearingh/2"
+                },
+                {
+                    "type": "str",
+                    "name": "$fn",
+                    "value": "30"
+                }
+            ],
+            "typename": "Node_cylinder",
+            "version": 1,
+            "y": -117.29994124999905,
+            "x": -459.1006474999988
+        },
+        {
+            "name": "node_cube1",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "sizex",
+                    "value": "bearingradius"
+                },
+                {
+                    "type": "str",
+                    "name": "sizey",
+                    "value": "ww*0.75"
+                },
+                {
+                    "type": "str",
+                    "name": "sizez",
+                    "value": "bearingh"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "bearingh/2"
+                },
+                {
+                    "type": "str",
+                    "name": "center",
+                    "value": "true",
+                    "combo": [
+                        "true",
+                        "false"
+                    ]
+                }
+            ],
+            "typename": "Node_cube",
+            "version": 1,
+            "y": 370.7159337500008,
+            "x": -210.6387224999997
+        },
+        {
+            "name": "node_cylinder1",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "radius",
+                    "value": "axisradius"
+                },
+                {
+                    "type": "str",
+                    "name": "radius2",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "height",
+                    "value": "axish"
+                },
+                {
+                    "type": "str",
+                    "name": "center",
+                    "value": "true",
+                    "combo": [
+                        "true",
+                        "false"
+                    ]
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "ll/2-axisdist"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "axish/2"
+                },
+                {
+                    "type": "str",
+                    "name": "$fn",
+                    "value": ""
+                }
+            ],
+            "typename": "Node_cylinder",
+            "version": 1,
+            "y": 185.29199500000107,
+            "x": -384.21825499999863
+        },
+        {
+            "name": "node_boolean",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "op",
+                    "value": "union",
+                    "combo": [
+                        "difference",
+                        "union",
+                        "intersection"
+                    ]
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "type": "object",
+                    "name": "object1",
+                    "value": ""
+                },
+                {
+                    "connection": "node_cube.object",
+                    "type": "object",
+                    "name": "object2",
+                    "value": ""
+                },
+                {
+                    "connection": "node_cylinder.object",
+                    "type": "object",
+                    "name": "object3",
+                    "value": ""
+                },
+                {
+                    "connection": "node_cylinder1.object",
+                    "type": "object",
+                    "name": "object4",
+                    "value": ""
+                },
+                {
+                    "connection": "node_cube1.object",
+                    "type": "object",
+                    "name": "object5",
+                    "value": ""
+                },
+                {
+                    "connection": "node_cube0.object",
+                    "type": "object",
+                    "name": "object6",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object7",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object8",
+                    "value": ""
+                }
+            ],
+            "typename": "Node_boolean",
+            "version": 1,
+            "y": -187.48047249999905,
+            "x": 646.0079962500004
+        },
+        {
+            "name": "node_param5",
+            "inputplugs": [
+                {
+                    "connection": "node_param4.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "bearingh"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "26"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": -727.6853120117171,
+            "x": -309.69650042724606
+        },
+        {
+            "name": "node_param3",
+            "inputplugs": [
+                {
+                    "connection": "node_param5.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "axish"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "29"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": -558.7064307617172,
+            "x": -572.2270504272476
+        },
+        {
+            "name": "node_param6",
+            "inputplugs": [
+                {
+                    "connection": "node_param3.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "axisradius"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "2.5"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": -559.4184307617174,
+            "x": -303.19505042724745
+        },
+        {
+            "name": "node_param7",
+            "inputplugs": [
+                {
+                    "connection": "node_param6.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "holderl"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "4"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": -561.2049307617172,
+            "x": -2.2420504272477046
+        },
+        {
+            "name": "node_param8",
+            "inputplugs": [
+                {
+                    "connection": "node_param7.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "holderh"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "16"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": -547.7949307617172,
+            "x": 249.52794957275296
+        }
+    ],
+    "version": 2
+}ENDGRAPHSCAD*/

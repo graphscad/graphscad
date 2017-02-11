@@ -1,0 +1,6 @@
+{
+    "object"              : {"color" : "#FFFF00"        },
+    "str"                 : {"color" : "#808080"        },
+    "param"               : {"color" : "#00FFFF"        },
+    "vector"              : {"color" : "#0000FF"        }
+}

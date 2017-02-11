@@ -1,0 +1,635 @@
+echo("Save this file as .scad with graphscad to get openscad code included");
+
+/*BEGINGRAPHSCAD{
+    "nodes": [
+        {
+            "name": "node_gear",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "mm_per_tooth",
+                    "value": "3"
+                },
+                {
+                    "type": "str",
+                    "name": "number_of_teeth",
+                    "value": "44"
+                },
+                {
+                    "type": "str",
+                    "name": "thickness",
+                    "value": "20"
+                },
+                {
+                    "type": "str",
+                    "name": "hole_diameter",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "twist",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "teeth_to_hide",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "pressure_angle",
+                    "value": "28"
+                },
+                {
+                    "type": "str",
+                    "name": "clearance",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "backlash",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "-1"
+                }
+            ],
+            "typename": "Node_gear",
+            "version": 1,
+            "y": -81.39704674697799,
+            "x": -517.1614535449967
+        },
+        {
+            "name": "node_cylinder",
+            "inputplugs": [
+                {
+                    "connection": "node_add.a_add_b",
+                    "type": "str",
+                    "name": "radius",
+                    "value": "1"
+                },
+                {
+                    "type": "str",
+                    "name": "radius2",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "height",
+                    "value": "11"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "-5.5"
+                },
+                {
+                    "type": "str",
+                    "name": "$fn",
+                    "value": ""
+                }
+            ],
+            "typename": "Node_cylinder",
+            "version": 1,
+            "y": -182.37507174697765,
+            "x": -69.29066354499662
+        },
+        {
+            "name": "node_boolean",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "op",
+                    "value": "difference",
+                    "combo": [
+                        "difference",
+                        "union",
+                        "intersection"
+                    ]
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "connection": "node_cylinder.object",
+                    "type": "object",
+                    "name": "object1",
+                    "value": ""
+                },
+                {
+                    "connection": "node_gear.object",
+                    "type": "object",
+                    "name": "object2",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object3",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object4",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object5",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object6",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object7",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object8",
+                    "value": ""
+                }
+            ],
+            "typename": "Node_boolean",
+            "version": 1,
+            "y": -78.12707174697744,
+            "x": 197.50933645500322
+        },
+        {
+            "name": "node_add",
+            "inputplugs": [
+                {
+                    "connection": "node_gear.pitch_radius",
+                    "type": "str",
+                    "name": "a",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "b",
+                    "value": "10"
+                }
+            ],
+            "typename": "Node_add",
+            "version": 1,
+            "y": -146.80707174697733,
+            "x": -260.01066354499665
+        },
+        {
+            "name": "node_gear0",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "mm_per_tooth",
+                    "value": "3"
+                },
+                {
+                    "type": "str",
+                    "name": "number_of_teeth",
+                    "value": "16"
+                },
+                {
+                    "type": "str",
+                    "name": "thickness",
+                    "value": "10"
+                },
+                {
+                    "type": "str",
+                    "name": "hole_diameter",
+                    "value": "3"
+                },
+                {
+                    "type": "str",
+                    "name": "twist",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "teeth_to_hide",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "pressure_angle",
+                    "value": "28"
+                },
+                {
+                    "type": "str",
+                    "name": "clearance",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "backlash",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                }
+            ],
+            "typename": "Node_gear",
+            "version": 1,
+            "y": 262.75292825302256,
+            "x": -449.4506635449966
+        },
+        {
+            "name": "node_translate",
+            "inputplugs": [
+                {
+                    "connection": "node_gear0.object",
+                    "type": "object",
+                    "name": "object",
+                    "value": ""
+                },
+                {
+                    "connection": "node_sub.a_sub_b",
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "space",
+                    "value": "world",
+                    "combo": [
+                        "world",
+                        "object",
+                        "local"
+                    ]
+                }
+            ],
+            "typename": "Node_translate",
+            "version": 1,
+            "y": 135.4329282530225,
+            "x": 407.4693364550035
+        },
+        {
+            "name": "node_sub",
+            "inputplugs": [
+                {
+                    "connection": "node_gear.pitch_radius",
+                    "type": "str",
+                    "name": "a",
+                    "value": "0"
+                },
+                {
+                    "connection": "node_gear0.pitch_radius",
+                    "type": "str",
+                    "name": "b",
+                    "value": "0"
+                }
+            ],
+            "typename": "Node_sub",
+            "version": 1,
+            "y": 483.4329282530225,
+            "x": -137.53066354499651
+        },
+        {
+            "name": "node_gear1",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "mm_per_tooth",
+                    "value": "3"
+                },
+                {
+                    "type": "str",
+                    "name": "number_of_teeth",
+                    "value": "12"
+                },
+                {
+                    "type": "str",
+                    "name": "thickness",
+                    "value": "10"
+                },
+                {
+                    "type": "str",
+                    "name": "hole_diameter",
+                    "value": "3"
+                },
+                {
+                    "type": "str",
+                    "name": "twist",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "teeth_to_hide",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "pressure_angle",
+                    "value": "28"
+                },
+                {
+                    "type": "str",
+                    "name": "clearance",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "backlash",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                }
+            ],
+            "typename": "Node_gear",
+            "version": 1,
+            "y": 642.4329282530225,
+            "x": -411.5306635449965
+        },
+        {
+            "name": "node_mul",
+            "inputplugs": [
+                {
+                    "connection": "node_sub.a_sub_b",
+                    "type": "str",
+                    "name": "a",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "b",
+                    "value": "-1"
+                }
+            ],
+            "typename": "Node_mul",
+            "version": 1,
+            "y": 777.4329282530225,
+            "x": 90.46933645500349
+        },
+        {
+            "name": "node_translate0",
+            "inputplugs": [
+                {
+                    "connection": "node_gear0.object",
+                    "type": "object",
+                    "name": "object",
+                    "value": ""
+                },
+                {
+                    "connection": "node_mul.a_mul_b",
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "space",
+                    "value": "local",
+                    "combo": [
+                        "world",
+                        "object",
+                        "local"
+                    ]
+                }
+            ],
+            "typename": "Node_translate",
+            "version": 1,
+            "y": 542.4329282530225,
+            "x": 409.4693364550035
+        },
+        {
+            "name": "node_rotate0",
+            "inputplugs": [
+                {
+                    "connection": "node_gear1.object",
+                    "type": "object",
+                    "name": "object",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "rx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ry",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "rz",
+                    "value": "0.5*360/12"
+                },
+                {
+                    "type": "str",
+                    "name": "space",
+                    "value": "world",
+                    "combo": [
+                        "world",
+                        "object",
+                        "local"
+                    ]
+                }
+            ],
+            "typename": "Node_rotate",
+            "version": 1,
+            "y": 703.4329282530225,
+            "x": -96.53066354499651
+        },
+        {
+            "name": "node_translate1",
+            "inputplugs": [
+                {
+                    "connection": "node_gear0.object",
+                    "type": "object",
+                    "name": "object",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "connection": "node_mul.a_mul_b",
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "space",
+                    "value": "world",
+                    "combo": [
+                        "world",
+                        "object",
+                        "local"
+                    ]
+                }
+            ],
+            "typename": "Node_translate",
+            "version": 1,
+            "y": 750.4329282530225,
+            "x": 402.4693364550035
+        },
+        {
+            "name": "node_translate2",
+            "inputplugs": [
+                {
+                    "connection": "node_gear0.object",
+                    "type": "object",
+                    "name": "object",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "connection": "node_sub.a_sub_b",
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "space",
+                    "value": "world",
+                    "combo": [
+                        "world",
+                        "object",
+                        "local"
+                    ]
+                }
+            ],
+            "typename": "Node_translate",
+            "version": 1,
+            "y": 339.4329282530225,
+            "x": 402.4693364550035
+        },
+        {
+            "name": "node_color",
+            "inputplugs": [
+                {
+                    "connection": "node_boolean.object",
+                    "type": "object",
+                    "name": "object",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "r",
+                    "value": "0.5"
+                },
+                {
+                    "type": "str",
+                    "name": "g",
+                    "value": "0.5"
+                },
+                {
+                    "type": "str",
+                    "name": "b",
+                    "value": "1"
+                },
+                {
+                    "type": "str",
+                    "name": "a",
+                    "value": "1"
+                }
+            ],
+            "typename": "Node_color",
+            "version": 1,
+            "y": -75.88066549697743,
+            "x": 451.7463052050043
+        }
+    ],
+    "version": 2
+}ENDGRAPHSCAD*/

@@ -1,0 +1,723 @@
+echo("Save this file as .scad with graphscad to get openscad code included");
+
+/*BEGINGRAPHSCAD
+{
+    "nodes": [
+        {
+            "name": "node_emptysphere",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "radius",
+                    "value": "1"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tickness",
+                    "value": "tickness"
+                },
+                {
+                    "type": "str",
+                    "name": "$fn",
+                    "value": "64"
+                }
+            ],
+            "typename": "Node_emptysphere",
+            "version": 1,
+            "y": 447.9931315612796,
+            "x": -632.2147676658624
+        },
+        {
+            "name": "node_cube",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "sizex",
+                    "value": "radius*2+2"
+                },
+                {
+                    "type": "str",
+                    "name": "sizey",
+                    "value": "radius*2+2"
+                },
+                {
+                    "type": "str",
+                    "name": "sizez",
+                    "value": "radius*2+1"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "-radius-1"
+                },
+                {
+                    "type": "str",
+                    "name": "center",
+                    "value": "true",
+                    "combo": [
+                        "true",
+                        "false"
+                    ]
+                }
+            ],
+            "typename": "Node_cube",
+            "version": 1,
+            "y": 855.8948503112803,
+            "x": -600.0028145408633
+        },
+        {
+            "name": "node_boolean",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "op",
+                    "value": "difference",
+                    "combo": [
+                        "difference",
+                        "union",
+                        "intersection"
+                    ]
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "connection": "node_emptysphere0.object",
+                    "type": "object",
+                    "name": "object1",
+                    "value": ""
+                },
+                {
+                    "connection": "node_cube.object",
+                    "type": "object",
+                    "name": "object2",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object3",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object4",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object5",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object6",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object7",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object8",
+                    "value": ""
+                }
+            ],
+            "typename": "Node_boolean",
+            "version": 1,
+            "y": 725.4154753112797,
+            "x": -353.7490645408632
+        },
+        {
+            "name": "node_param",
+            "inputplugs": [
+                {
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "radius"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "6"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": 401.02860031128,
+            "x": -985.8196895408632
+        },
+        {
+            "name": "node_param0",
+            "inputplugs": [
+                {
+                    "connection": "node_param.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "tickness"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "2"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": 618.8829753112799,
+            "x": -994.239064540863
+        },
+        {
+            "name": "node_scale",
+            "inputplugs": [
+                {
+                    "connection": "node_boolean.object",
+                    "type": "object",
+                    "name": "object",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "sx",
+                    "value": "1"
+                },
+                {
+                    "type": "str",
+                    "name": "sy",
+                    "value": "1"
+                },
+                {
+                    "type": "str",
+                    "name": "sz",
+                    "value": "coneheight/radius"
+                },
+                {
+                    "type": "str",
+                    "name": "space",
+                    "value": "world",
+                    "combo": [
+                        "world",
+                        "object",
+                        "local"
+                    ]
+                }
+            ],
+            "typename": "Node_scale",
+            "version": 1,
+            "y": 749.6504753112797,
+            "x": -92.72156454086328
+        },
+        {
+            "name": "node_param1",
+            "inputplugs": [
+                {
+                    "connection": "node_param0.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "coneheight"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "20"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": 840.8161003112798,
+            "x": -1010.4778145408634
+        },
+        {
+            "name": "node_param2",
+            "inputplugs": [
+                {
+                    "connection": "node_param1.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": "bodyheight"
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "bodyheight"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "40"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": 1048.2317253112797,
+            "x": -1015.4434395408632
+        },
+        {
+            "name": "node_translate",
+            "inputplugs": [
+                {
+                    "connection": "node_scale.object",
+                    "type": "object",
+                    "name": "object",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "bodyheight"
+                },
+                {
+                    "type": "str",
+                    "name": "space",
+                    "value": "world",
+                    "combo": [
+                        "world",
+                        "object",
+                        "local"
+                    ]
+                }
+            ],
+            "typename": "Node_translate",
+            "version": 1,
+            "y": 756.8504753112799,
+            "x": 129.67843545913667
+        },
+        {
+            "name": "node_tube",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "radius",
+                    "value": "radius"
+                },
+                {
+                    "type": "str",
+                    "name": "radius2",
+                    "value": "radius-radius/4"
+                },
+                {
+                    "type": "str",
+                    "name": "height",
+                    "value": "bodyheight"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tickness",
+                    "value": "tickness"
+                },
+                {
+                    "type": "str",
+                    "name": "holemargin",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "$fn",
+                    "value": ""
+                }
+            ],
+            "typename": "Node_tube",
+            "version": 1,
+            "y": 966.6104753112797,
+            "x": 122.79843545913661
+        },
+        {
+            "name": "node_scale0",
+            "inputplugs": [
+                {
+                    "connection": "node_emptysphere.outobject",
+                    "type": "object",
+                    "name": "object",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "sx",
+                    "value": "radius*2"
+                },
+                {
+                    "type": "str",
+                    "name": "sy",
+                    "value": "bodyheight/20"
+                },
+                {
+                    "type": "str",
+                    "name": "sz",
+                    "value": "0.75*bodyheight"
+                },
+                {
+                    "type": "str",
+                    "name": "space",
+                    "value": "world",
+                    "combo": [
+                        "world",
+                        "object",
+                        "local"
+                    ]
+                }
+            ],
+            "typename": "Node_scale",
+            "version": 1,
+            "y": 421.2854753112802,
+            "x": -301.6040645408634
+        },
+        {
+            "name": "node_rotate",
+            "inputplugs": [
+                {
+                    "connection": "node_scale0.object",
+                    "type": "object",
+                    "name": "object",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "rx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ry",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "rz",
+                    "value": "90"
+                },
+                {
+                    "type": "str",
+                    "name": "space",
+                    "value": "world",
+                    "combo": [
+                        "world",
+                        "object",
+                        "local"
+                    ]
+                }
+            ],
+            "typename": "Node_rotate",
+            "version": 1,
+            "y": 557.9104753112802,
+            "x": -97.29156454086342
+        },
+        {
+            "name": "node_boolean0",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "op",
+                    "value": "union",
+                    "combo": [
+                        "difference",
+                        "union",
+                        "intersection"
+                    ]
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "connection": "node_scale0.object",
+                    "type": "object",
+                    "name": "object1",
+                    "value": ""
+                },
+                {
+                    "connection": "node_rotate.object",
+                    "type": "object",
+                    "name": "object2",
+                    "value": ""
+                },
+                {
+                    "connection": "node_translate.object",
+                    "type": "object",
+                    "name": "object3",
+                    "value": ""
+                },
+                {
+                    "connection": "node_tube.object",
+                    "type": "object",
+                    "name": "object4",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object5",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object6",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object7",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object8",
+                    "value": ""
+                }
+            ],
+            "typename": "Node_boolean",
+            "version": 1,
+            "y": 415.91047531128015,
+            "x": 379.8334354591366
+        },
+        {
+            "name": "node_cylinder",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "radius",
+                    "value": "radius*4"
+                },
+                {
+                    "type": "str",
+                    "name": "radius2",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "height",
+                    "value": "100"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "-100"
+                },
+                {
+                    "type": "str",
+                    "name": "$fn",
+                    "value": ""
+                }
+            ],
+            "typename": "Node_cylinder",
+            "version": 1,
+            "y": 769.8042253112804,
+            "x": 394.63968545913633
+        },
+        {
+            "name": "node_boolean1",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "op",
+                    "value": "difference",
+                    "combo": [
+                        "difference",
+                        "union",
+                        "intersection"
+                    ]
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "connection": "node_boolean0.object",
+                    "type": "object",
+                    "name": "object1",
+                    "value": ""
+                },
+                {
+                    "connection": "node_cylinder.object",
+                    "type": "object",
+                    "name": "object2",
+                    "value": ""
+                },
+                {
+                    "connection": "node_tube.inobject",
+                    "type": "object",
+                    "name": "object3",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object4",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object5",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object6",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object7",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object8",
+                    "value": ""
+                }
+            ],
+            "typename": "Node_boolean",
+            "version": 1,
+            "y": 862.5104753112805,
+            "x": 806.8053104591364
+        },
+        {
+            "name": "node_emptysphere0",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "radius",
+                    "value": "radius"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tickness",
+                    "value": "tickness"
+                },
+                {
+                    "type": "str",
+                    "name": "$fn",
+                    "value": ""
+                }
+            ],
+            "typename": "Node_emptysphere",
+            "version": 1,
+            "y": 652.9555456000004,
+            "x": -632.8069747187487
+        }
+    ],
+    "version": 2
+}
+ENDGRAPHSCAD*/

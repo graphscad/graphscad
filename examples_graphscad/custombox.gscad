@@ -1,0 +1,413 @@
+echo("Save this file as .scad with graphscad to get openscad code");
+
+/*BEGINGRAPHSCAD
+{
+    "nodes": [
+        {
+            "name": "node_box",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "sizex",
+                    "value": "x"
+                },
+                {
+                    "type": "str",
+                    "name": "sizey",
+                    "value": "y"
+                },
+                {
+                    "type": "str",
+                    "name": "sizez",
+                    "value": "z"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "rounding",
+                    "value": "rounding"
+                },
+                {
+                    "type": "str",
+                    "name": "tickness",
+                    "value": "tickness"
+                },
+                {
+                    "type": "str",
+                    "name": "interiorheight",
+                    "value": "1"
+                },
+                {
+                    "type": "str",
+                    "name": "$fn",
+                    "value": "64"
+                },
+                {
+                    "type": "str",
+                    "name": "center",
+                    "value": "true",
+                    "combo": [
+                        "true",
+                        "false"
+                    ]
+                }
+            ],
+            "typename": "Node_box",
+            "version": 1,
+            "y": -318.986,
+            "x": -1466.3
+        },
+        {
+            "name": "node_box0",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "sizex",
+                    "value": "x-tickness*2-0.2"
+                },
+                {
+                    "type": "str",
+                    "name": "sizey",
+                    "value": "y-tickness*2-0.2"
+                },
+                {
+                    "type": "str",
+                    "name": "sizez",
+                    "value": "tickness*2"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "y+2"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "tickness"
+                },
+                {
+                    "type": "str",
+                    "name": "rounding",
+                    "value": "rounding"
+                },
+                {
+                    "type": "str",
+                    "name": "tickness",
+                    "value": "tickness"
+                },
+                {
+                    "type": "str",
+                    "name": "interiorheight",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "$fn",
+                    "value": "64"
+                },
+                {
+                    "type": "str",
+                    "name": "center",
+                    "value": "true",
+                    "combo": [
+                        "true",
+                        "false"
+                    ]
+                }
+            ],
+            "typename": "Node_box",
+            "version": 1,
+            "y": 327.4526400000001,
+            "x": -1454.8040799999997
+        },
+        {
+            "name": "node_box1",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "sizex",
+                    "value": "x"
+                },
+                {
+                    "type": "str",
+                    "name": "sizey",
+                    "value": "y"
+                },
+                {
+                    "type": "str",
+                    "name": "sizez",
+                    "value": "tickness"
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "y+2"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "rounding",
+                    "value": "rounding"
+                },
+                {
+                    "type": "str",
+                    "name": "tickness",
+                    "value": "tickness"
+                },
+                {
+                    "type": "str",
+                    "name": "interiorheight",
+                    "value": "tickness"
+                },
+                {
+                    "type": "str",
+                    "name": "$fn",
+                    "value": "64"
+                },
+                {
+                    "type": "str",
+                    "name": "center",
+                    "value": "true",
+                    "combo": [
+                        "true",
+                        "false"
+                    ]
+                }
+            ],
+            "typename": "Node_box",
+            "version": 1,
+            "y": -2.9493599999998708,
+            "x": -1454.69408
+        },
+        {
+            "name": "node_boolean",
+            "inputplugs": [
+                {
+                    "type": "str",
+                    "name": "op",
+                    "value": "union",
+                    "combo": [
+                        "difference",
+                        "union",
+                        "intersection"
+                    ]
+                },
+                {
+                    "type": "str",
+                    "name": "tx",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "ty",
+                    "value": "0"
+                },
+                {
+                    "type": "str",
+                    "name": "tz",
+                    "value": "0"
+                },
+                {
+                    "connection": "node_box.object",
+                    "type": "object",
+                    "name": "object1",
+                    "value": ""
+                },
+                {
+                    "connection": "node_box1.object",
+                    "type": "object",
+                    "name": "object2",
+                    "value": ""
+                },
+                {
+                    "connection": "node_box0.object",
+                    "type": "object",
+                    "name": "object3",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object4",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object5",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object6",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object7",
+                    "value": ""
+                },
+                {
+                    "type": "object",
+                    "name": "object8",
+                    "value": ""
+                }
+            ],
+            "typename": "Node_boolean",
+            "version": 1,
+            "y": -48.53685999999996,
+            "x": -1125.2940800000001
+        },
+        {
+            "name": "param_10",
+            "inputplugs": [
+                {
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "x"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "20"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": -318.3292578124998,
+            "x": -1745.6237109375
+        },
+        {
+            "name": "node_param",
+            "inputplugs": [
+                {
+                    "connection": "param_10.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "y"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "30"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": -163.7547999999999,
+            "x": -1743.4660000000003
+        },
+        {
+            "name": "node_param0",
+            "inputplugs": [
+                {
+                    "connection": "node_param.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "z"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "10"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": -2.7819999999999325,
+            "x": -1738.1412
+        },
+        {
+            "name": "node_param1",
+            "inputplugs": [
+                {
+                    "connection": "node_param0.nextparam",
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "tickness"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "1"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": 160.95560000000012,
+            "x": -1739.3700000000001
+        },
+        {
+            "name": "node_param2",
+            "inputplugs": [
+                {
+                    "type": "param",
+                    "name": "previousparam",
+                    "value": ""
+                },
+                {
+                    "type": "str",
+                    "name": "name",
+                    "value": "rounding"
+                },
+                {
+                    "type": "str",
+                    "name": "string",
+                    "value": "5"
+                }
+            ],
+            "typename": "Node_param",
+            "version": 1,
+            "y": 325.7172,
+            "x": -1734.4548
+        }
+    ],
+    "version": 2
+}
+ENDGRAPHSCAD*/

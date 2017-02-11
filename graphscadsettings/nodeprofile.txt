@@ -1,0 +1,11 @@
+{
+    "math"              : {"color" : "#CF40CF"                                        },
+    "object"            : {"color" : "#CFCF40"                                        },
+    "object2d"          : {"color" : "#808020"                                        },
+    "string"            : {"color" : "#000000" ,"hidetitle" : true                    },
+    "operation"         : {"color" : "#4040CF"                                        },
+    "operation2d"       : {"color" : "#404080"                                        },
+    "transform"         : {"color" : "#40CF40"                                        },
+    "control statement" : {"color" : "#CF4040"                                        },
+    "declaration"       : {"color" : "#008080"                                        }
+}
